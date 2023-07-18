@@ -1,0 +1,22 @@
+{
+  "name": "nodewebapp",
+  "version": "1.0.0",
+  "description": "My first node web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/pcperico/NodeWebApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcperico/NodeWebApp/issues"
+  },
+  "homepage": "https://github.com/pcperico/NodeWebApp#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
