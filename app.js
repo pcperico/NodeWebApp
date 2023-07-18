@@ -12,6 +12,8 @@ app.get('/',(req,res)=>{
     res.send("Hello World!!");
 });
 
-app.listen(3000,()=>{
-    debug(`Server  listing on port: ${chalk.green(3000)}` );
+const PORT = process.env.PORT;
+
+app.listen(PORT,()=>{
+    debug(`Server  listing on port: ${chalk.green(PORT)}` );
 });
