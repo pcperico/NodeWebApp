@@ -13,5 +13,5 @@ app.get('/',(req,res)=>{
 });
 
 app.listen(3000,()=>{
-    debug(`Server running and listing on port: ${chalk.green(3000)}` );
+    debug(`Server  listing on port: ${chalk.green(3000)}` );
 });
