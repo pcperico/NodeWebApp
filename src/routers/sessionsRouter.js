@@ -23,7 +23,7 @@ sessionsRouter.route('/')
             catch (error) {
                 debug(error.stack);
             }
-
+            client.close();
         }());
        
     });

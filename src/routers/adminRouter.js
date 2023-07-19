@@ -22,7 +22,7 @@ adminRouter.route('/').get((req,res)=>{
         {
             debug(error.stack);
         }
-
+        client.close();
     }());
 
 });
