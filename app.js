@@ -4,6 +4,8 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 
+
+
 const app = express();
 
 const sessionsRouter = express.Router();
@@ -14,15 +16,12 @@ app.use(express.static(path.join(__dirname,'/public')));
 app.set('views','./src/views');
 app.set('view engine','ejs');
 
+const sessions = require('./src/data/sessions.json');
+
 sessionsRouter.route('/')
     .get((req,res)=>{
         res.render('sessions',{
-            sessions:[
-                {title:'Session 1', description:'this is session 1'},
-                {title:'Session 2', description:'this is session 2'},
-                {title:'Session 3', description:'this is session 3'},
-                {title:'Session 4', description:'this is session 4'}
-            ]
+            sessions 
         });
     });
 
