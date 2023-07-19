@@ -4,6 +4,15 @@ const debug = require('debug')('app:sessionsRouter');
 const { MongoClient, ObjectId } = require('mongodb');
 
 
+sessionsRouter.use((req,res,next)=>{
+    if(req.user){
+        next();
+    }
+    else{
+        res.redirect('/auth/signIn');
+    }
+});
+
 sessionsRouter.route('/')
     .get((req, res) => {
         const url = 'mongodb://localhost:27017/?retryWrites=true&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000';
