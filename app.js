@@ -18,9 +18,11 @@ app.set('view engine','ejs');
 
 
 const sessionsRouter = require('./src/routers/sessionsRouter');
+const adminRouter = require('./src/routers/adminRouter');
 
 
 app.use('/sessions',sessionsRouter);
+app.use('/admin',adminRouter);
 
 app.get('/',(req,res)=>{
     res.render('index',{title: ' Globomantics'});
