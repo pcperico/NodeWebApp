@@ -25,9 +25,10 @@ sessionsRouter.route('/')
         });
     });
 
-sessionsRouter.route('/1')
+sessionsRouter.route('/:id')
     .get((req,res)=>{
-        res.send('hello single sessions');
+        const id = req.params.id;
+        res.send('hello single session '+id);
     });
 
 app.use('/sessions',sessionsRouter);
